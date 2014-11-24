@@ -7,6 +7,7 @@ An opencore amr codec JNI wrapper with explaination
 - [opencore][1] is the multimedia framework of android, which is a originallly contributed by PacketVideo.
 - [AMR][2] is abbreviation for Adaptive Multi-Rate audio codec, which is an audio compression format optimized for speech coding. 
 - [opencore-AMR][3] is extracted from opencore as an codec for amr<->pcm encode/decode
+
 ## What Is This
 - opencore-AMR-Android is a wrapper for handy usage. You can usage wrapped api in Android Applciation without any troubles of writing c++ wrapper or ndk mk file.
 
@@ -24,6 +25,7 @@ An opencore amr codec JNI wrapper with explaination
     AmrEncoder.exit();
 ```
 there you go.
+
 ## Explore More
 Coming soon.
 
