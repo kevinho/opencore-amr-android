@@ -9,6 +9,7 @@ An opencore amr codec JNI wrapper with explaination
 - [opencore-AMR][3] is extracted from opencore as an codec for amr<->pcm encode/decode
 ## What Is This
 - opencore-AMR-Android is a wrapper for handy usage. You can usage wrapped api in Android Applciation without any troubles of writing c++ wrapper or ndk mk file.
+
 ## Quick Start Up
 - Down load the package. 
 - Put jni/libs/src folder to your Android Studio or ADT application project.
