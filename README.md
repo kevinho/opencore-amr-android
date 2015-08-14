@@ -21,12 +21,15 @@ An opencore amr codec JNI wrapper with explanation
 ``` java
     AmrEncoder.init(0);
     int mode = AmrEncoder.Mode.MR122.ordinal();
-    short[] in;//short array read from AudioRecorder
+    short[] in;//short array read from AudioRecorder, recommend length 160
     byte[] out = new byte[in.length];
     int byteEncoded = AmrEncoder.encode(mode, in, out);
     AmrEncoder.exit();
 ```
 there you go.
+
+## FAQ
+1. The second parameter of AmrEncoder.encode accept an array, it's recommended to 160 in short, or 320 in byte.
 
   [1]: https://github.com/android/platform_external_opencore
   [2]: http://en.wikipedia.org/wiki/Adaptive_Multi-Rate_audio_codec
