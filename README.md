@@ -21,7 +21,7 @@ And one solution for packaging amr audio files.
 - Call api like this:
 
 ``` java
-    AmrEncoder.init();
+    AmrEncoder.init(0);
     int mode = AmrEncoder.Mode.MR122.ordinal();
     short[] in;//short array read from AudioRecorder, recommend length 160
     byte[] out = new byte[in.length];
