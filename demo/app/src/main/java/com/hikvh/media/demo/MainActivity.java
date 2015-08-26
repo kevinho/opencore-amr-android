@@ -1,14 +1,15 @@
-package com.hikvh.media;
+package com.hikvh.media.demo;
 
-import android.support.v7.app.AppCompatActivity;
+import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.hikvh.media.KCacheUtils;
 import com.hikvh.media.sound.SoundMan;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends Activity {
 
     Button recordButton;
     boolean isRecording;

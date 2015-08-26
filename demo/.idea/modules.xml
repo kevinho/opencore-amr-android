@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/demo.iml" filepath="$PROJECT_DIR$/demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/opencore-amr-android/opencore-amr-android.iml" filepath="$PROJECT_DIR$/opencore-amr-android/opencore-amr-android.iml" />
     </modules>
   </component>
 </project>

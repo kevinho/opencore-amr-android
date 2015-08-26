@@ -5,7 +5,6 @@ import android.content.pm.PackageManager;
 import android.os.Environment;
 
 import java.io.File;
-import java.text.DecimalFormat;
 
 import static android.os.Environment.MEDIA_MOUNTED;
 

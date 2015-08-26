@@ -1,4 +1,4 @@
-OpenCore-Amr-Android
+opencore-amr-android
 ====================
 
 An opencore amr codec JNI wrapper with explanation,
