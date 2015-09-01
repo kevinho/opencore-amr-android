@@ -12,12 +12,37 @@ And one solution for packaging amr audio files.
 - [opencore-AMR][3] is extracted from opencore as an codec for amr<->pcm encode/decode
 
 ## What Is This
-- opencore-AMR-Android is a wrapper for handy usage. You can usage wrapped api in Android Application without any troubles of writing c++ wrapper or ndk mk file.
-- demo project offer a solution for packaging amr audio files, in elegant code structure.
+- Opencore-amr-dndroid is a wrapper for handy usage. You can usage wrapped api in Android Application without any troubles of writing c++ wrapper or ndk mk file.
+- Demo project offer a solution for packaging amr audio files, in elegant code structure.
+
+## Setup
+- Android Studio
+
+  1. Add jcenter as your repository in project's build.gradle:
+  ```gradle
+  allprojects {
+        repositories {
+            jcenter()//this is the default setting
+        }
+      }
+  ```
+  2. Add dependency in your module's build.gradle:
+  ```gradle
+  dependencies {
+        compile fileTree(dir: 'libs', include: ['*.jar'])
+        compile 'com.hikvh:opencore-amr-android:1.0.0'//this is the lib
+  }
+  ```
+
+  OR: Copy the content if [library](library/) to your module, as follows:
+
+  ![Integration](screenshot/android_studio_integration.png)
+
+- ADT(Eclipse)
+  1. Copy the content if [library](library/) to your project:
+  > Copy content of libs and src to the corresponding folder
 
 ## Quick Start Up
-- Down load the library.
-- Put jni/libs/src folder to your Android Studio or ADT application project.
 - Call api like this:
 
 ``` java
