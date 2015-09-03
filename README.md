@@ -40,7 +40,7 @@ And one solution for packaging amr audio files.
   ![Integration](screenshot/android_studio_integration.png)
 
 - ADT(Eclipse)
-  1. Copy the content if [library](library/) to your project:
+  Copy the content if [library](library/) to your project:
   > Copy content of libs and src to the corresponding folder
 
 ## Quick Start Up
