@@ -65,7 +65,11 @@ If you are interested in this solution, please refer to [demo](demo/)
 
 
 ## FAQ
-1. The second parameter of AmrEncoder.encode accept an array, it's recommended to 160 in short, or 320 in byte.
+Please edit the FAQ files to help others, thanks! (赠人玫瑰，手留余香)
+
+[FAQ_CN](FAQ_CN.md)
+
+[FAQ](FAQ.md)
 
   [1]: https://github.com/android/platform_external_opencore
   [2]: http://en.wikipedia.org/wiki/Adaptive_Multi-Rate_audio_codec
