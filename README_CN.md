@@ -61,7 +61,11 @@ there you go.
 如果感兴趣，可以参照 [demo](demo/)
 
 ## FAQ
-1. AmrEncoder.encode的第二份参数，接受一个数组，推荐为160个short，或者320个byte
+编辑FAQ文档，写上您使用上遇到的问题和解决方案，帮助后人，谢谢！赠人玫瑰，手留余香！
+
+[FAQ_CN](FAQ_CN.md)
+
+[FAQ](FAQ.md)
 
   [1]: https://github.com/android/platform_external_opencore
   [2]: http://en.wikipedia.org/wiki/Adaptive_Multi-Rate_audio_codec
