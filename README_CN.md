@@ -29,7 +29,7 @@ opencore-amr-android
   ```gradle
   dependencies {
         compile fileTree(dir: 'libs', include: ['*.jar'])
-        compile 'com.hikvh:opencore-amr-android:1.0.0'//这个地方使用依赖
+        compile 'io.kvh:amr:1.0.1'//这个地方使用依赖
   }
   ```
 

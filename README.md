@@ -31,7 +31,7 @@ And one solution for packaging amr audio files.
   ```gradle
   dependencies {
         compile fileTree(dir: 'libs', include: ['*.jar'])
-        compile 'com.hikvh:opencore-amr-android:1.0.0'//this is the lib
+        compile 'io.kvh:amr:1.0.1'//this is the lib
   }
   ```
 
