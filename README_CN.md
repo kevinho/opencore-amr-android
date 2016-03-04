@@ -41,16 +41,29 @@ opencore-amr-android
 - ADT(Eclipse)： 参照上图，拷贝对应文件即可。
 
 ## 调用API
+* encode
 
-``` java
-    AmrEncoder.init(0);
-    int mode = AmrEncoder.Mode.MR122.ordinal();
-    short[] in;//长度160
-    byte[] out = new byte[in.length];
-    int byteEncoded = AmrEncoder.encode(mode, in, out);
-    AmrEncoder.exit();
+``` 
+AmrEncoder.init(0);
+
+int mode = AmrEncoder.Mode.MR122.ordinal();
+short[] in = new short[160];//short array read from AudioRecorder, length 160
+byte[] out = new byte[32];//output amr frame, length 32
+int byteEncoded = AmrEncoder.encode(mode, in, out);
+
+AmrEncoder.exit();        
 ```
-there you go.
+* decode
+
+```
+int state = AmrDecoder.init();
+
+byte[] amrframe = new byte[32];//amr frame 32 bytes
+short[] pcmframs = new short[160];//pcm frame 160 shorts
+AmrDecoder.decode(state, amrframe, pcmframs);
+
+AmrDecoder.exit(state);
+```
 
 ## 将amr打包成文件
 > record->encode->package amr file->upload(not implemented)

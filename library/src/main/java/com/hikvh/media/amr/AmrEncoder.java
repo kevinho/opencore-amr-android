@@ -27,6 +27,6 @@ public class AmrEncoder {
     public static native void exit();
 
     static {
-        System.loadLibrary("amr-codec");
-    }
+		System.loadLibrary("amr-codec");
+	}
 }

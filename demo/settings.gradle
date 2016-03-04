@@ -1,1 +1,1 @@
-include ':opencore-amr-android', 'app'
+include ':amr', 'app'

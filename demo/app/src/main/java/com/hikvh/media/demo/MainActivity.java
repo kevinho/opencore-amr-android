@@ -7,6 +7,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.hikvh.media.KCacheUtils;
+import com.hikvh.media.amr.AmrDecoder;
 import com.hikvh.media.sound.SoundMan;
 
 public class MainActivity extends Activity {
@@ -41,5 +42,7 @@ public class MainActivity extends Activity {
         }
 
         isRecording = !isRecording;
+
+
     }
 }

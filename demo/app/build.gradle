@@ -22,6 +22,6 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile project(':opencore-amr-android')
-    //compile 'com.hikvh:opencore-amr-android:1.0.0'//this is the second option
+    //compile project(':amr')
+    compile 'io.kvh:amr:1.0.1'//this is the second option
 }

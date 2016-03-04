@@ -44,17 +44,30 @@ And one solution for packaging amr audio files.
   > Copy content of libs and src to the corresponding folder
 
 ## Quick Start Up
-- Call api like this:
 
-``` java
-    AmrEncoder.init(0);
-    int mode = AmrEncoder.Mode.MR122.ordinal();
-    short[] in;//short array read from AudioRecorder, recommend length 160
-    byte[] out = new byte[in.length];
-    int byteEncoded = AmrEncoder.encode(mode, in, out);
-    AmrEncoder.exit();
+* encode
+
+``` 
+AmrEncoder.init(0);
+
+int mode = AmrEncoder.Mode.MR122.ordinal();
+short[] in = new short[160];//short array read from AudioRecorder, length 160
+byte[] out = new byte[32];//output amr frame, length 32
+int byteEncoded = AmrEncoder.encode(mode, in, out);
+
+AmrEncoder.exit();        
 ```
-there you go.
+* decode
+
+```
+int state = AmrDecoder.init();
+
+byte[] amrframe = new byte[32];//amr frame 32 bytes
+short[] pcmframs = new short[160];//pcm frame 160 shorts
+AmrDecoder.decode(state, amrframe, pcmframs);
+
+AmrDecoder.exit(state);
+```
 
 ## Packaging amr audio to file system
 > record->encode->package amr file->upload(not implemented)
