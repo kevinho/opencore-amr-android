@@ -9,38 +9,40 @@ And one solution for packaging amr audio files.
 
 ## Background
 - [opencore][1] is the multimedia framework of android, which is a originallly contributed by PacketVideo.
-- [AMR][2] is abbreviation for Adaptive Multi-Rate audio codec, which is an audio compression format optimized for speech coding.
-- [opencore-AMR][3] is extracted from opencore as an codec for amr<->pcm encode/decode
+- [amr][2] is abbreviation for Adaptive Multi-Rate audio codec, which is an audio compression format optimized for speech coding.
+- [opencore-amr][3] is extracted from opencore as an codec for amr<->pcm encode/decode
 
 ## What Is This
-- Opencore-amr-dndroid is a wrapper for handy usage. You can usage wrapped api in Android Application without any troubles of writing c++ wrapper or ndk mk file.
-- Demo project offer a solution for packaging amr audio files, in elegant code structure.
+- opencore-amr-dndroid is a wrapper for handy usage. You can usage wrapped api in Android Application without any troubles of writing c++ wrapper or ndk mk file.
+- amr project offer a solution for packaging amr audio files, in elegant code structure.
 
 ## Setup
-- Android Studio
+### Android Studio
 
-  1. Add jcenter as your repository in project's build.gradle:
-  ```gradle
+* Add jcenter as your repository in project's build.gradle:
+  
+  ```
   allprojects {
         repositories {
             jcenter()//this is the default setting
         }
       }
   ```
-  2. Add dependency in your module's build.gradle:
-  ```gradle
+* Add dependency in your module's build.gradle:  
+  
+  ```
   dependencies {
         compile fileTree(dir: 'libs', include: ['*.jar'])
-        compile 'io.kvh:amr:1.0.1'//this is the lib
+        compile 'io.kvh:amr:1.1.0'//this is the lib
   }
   ```
 
-  OR: Copy the content if [library](library/) to your module, as follows:
+  OR: Copy the content if [Codec/amr](Codec/amr) to your module, as follows:
 
   ![Integration](screenshot/android_studio_integration.png)
 
-- ADT(Eclipse)
-  Copy the content if [library](library/) to your project:
+### ADT(Eclipse)
+  Copy the content if [Codec/amr](Codec/amr) to your project:
   > Copy content of libs and src to the corresponding folder
 
 ## Quick Start Up
@@ -76,6 +78,11 @@ Audio steam is packaged to file in slices, the slice last a few seconds(customiz
 
 If you are interested in this solution, please refer to [demo](demo/)
 
+## Changelog
+
+### v1.1.0 2016-04-02
+- add prebuilds for all archs
+- rename pakcage
 
 ## FAQ
 Please edit the FAQ files to help others, thanks! (赠人玫瑰，手留余香)

@@ -79,7 +79,6 @@ bintray {
         issueTrackerUrl = PROJ_ISSUETRACKERURL
         vcsUrl = PROJ_VCSURL
         licenses = ["Apache-2.0"]
-        publish = true
         version {
             desc = PROJ_DESCRIPTION
             gpg {

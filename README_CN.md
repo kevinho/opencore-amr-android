@@ -1,42 +1,44 @@
 opencore-amr-android
 ====================
 
-一个Android平台下的amr编解码库，附带了将amr组装成文件的解决方案。
+一个 Android 平台下的 amr 编解码库，附带了将 amr 组装成文件的解决方案。
 
 ## 帮助QQ群：453503476
 
 ## 背景资料
-- [opencore][1] 是一个Android的多媒体框架，最早是由PacketVideo贡献的。
-- [AMR][2] 是Adaptive Multi-Rate编解码器的缩写，提供了较高的压缩率，主要用户声音传送编解码。
-- [opencore-AMR][3] 是从opencore中抽取出来，用于amr与pcm的互相转换。
+- [opencore][1] 是一个Android 的多媒体框架，最早是由 PacketVideo 贡献的。
+- [amr][2] 是 Adaptive Multi-Rate 编解码器的缩写，提供了较高的压缩率，主要用户声音传送编解码。
+- [opencore-amr][3] 是从 opencore 中抽取出来，用于 amr 与 pcm 的互相转换。
 
 ## 这是什么
-- Opencoe-amr-android 是一个拿来即用的工具，免去了手动写c++ wrapper和ndk mk文件的繁琐。
-- Demo 项目提供了一个把pcm->amr->file的方案。
+- opencoe-amr-android 是一个拿来即用的工具，免去了手动写c++ wrapper和ndk mk文件的繁琐。
+- app 项目提供了一个把pcm->amr->file的方案。
 
 ## 使用
-- Android Studio
+### Android Studio
 
-  1. 在project的build.gradle中添加:
-  ```gradle
+* 在project的build.gradle中添加:  
+
+  ```
   allprojects {
         repositories {
-            jcenter()//0.8.0版之后的Android Studio默认为jcenter
+            jcenter()
         }
       }
   ```
-  2. 在module的build.gradle中添加:
-  ```gradle
+* 在module的build.gradle中添加:3. 
+  
+  ```
   dependencies {
         compile fileTree(dir: 'libs', include: ['*.jar'])
-        compile 'io.kvh:amr:1.0.1'//这个地方使用依赖
+        compile 'io.kvh:amr:1.1.0'//这个地方使用依赖
   }
   ```
 
-  或者: 拷贝如下文件夹的内容 [library](library/) 到你的module，如下图:
+  或者: 拷贝如下文件夹的内容 [Code/amr/](Code/amr/) 到你的module，如下图:
 
   ![Integration](screenshot/android_studio_integration.png)
-> 也可以参考demo工程
+> 也可以参考 Code/amr/ 工程
 
 - ADT(Eclipse)： 参照上图，拷贝对应文件即可。
 
@@ -65,13 +67,20 @@ AmrDecoder.decode(state, amrframe, pcmframs);
 AmrDecoder.exit(state);
 ```
 
-## 将amr打包成文件
+## 将 amr 打包成文件
 > record->encode->package amr file->upload(not implemented)
 将音频流打包成文件切片，每个切片若干秒。
 这个策略在如下场景实用：
 在较为不好的网络环境下，需要录制较长的音频，上传到服务器，在服务器进行组装。
 
-如果感兴趣，可以参照 [demo](demo/)
+如果感兴趣，可以参照 [Code/amr/](Code/amr/)
+
+## Changelog
+
+### v1.1.0 2016-04-02
+- 增加全平台的 prebuild
+- 修改代码包名
+- 整理代码
 
 ## FAQ
 编辑FAQ文档，写上您使用上遇到的问题和解决方案，帮助后人，谢谢！赠人玫瑰，手留余香！
