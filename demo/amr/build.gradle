@@ -1,25 +1,69 @@
-apply plugin: 'com.android.library'
+apply plugin: "com.android.model.application"
 
-android {
-    compileSdkVersion 19
-    buildToolsVersion '19.1.0'
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle-experimental:0.7.0-alpha4"
 
-    sourceSets {
-        main {
-            jniLibs.srcDirs = ['libs']
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.2'
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:1.3'
+    }
+}
+
+model {
+    android {
+        compileSdkVersion 23
+        buildToolsVersion "23.0.2"
+
+        sources {
+            main {
+                jni {
+                    source {
+                        srcDirs 'src/main/jni'
+                    }
+                }
+            }
         }
-    }
 
-    defaultConfig {
-        minSdkVersion 9
-        targetSdkVersion 19
-        versionCode 1
-        versionName "1.0"
-    }
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        ndk {
+            moduleName "amr-codec"
+            cppFlags.addAll([
+                    "-I${file("src/main/jni/oscl")}".toString(),
+                    "-I${file("src/main/jni/opencore/codecs_v2/audio/gsm_amr/amr_nb/common/include")}".toString(),
+                    "-I${file("src/main/jni/opencore/codecs_v2/audio/gsm_amr/amr_nb/common/src")}".toString(),
+                    "-I${file("src/main/jni/opencore/codecs_v2/audio/gsm_amr/amr_nb/dec/include")}".toString(),
+                    "-I${file("src/main/jni/opencore/codecs_v2/audio/gsm_amr/amr_nb/dec/src")}".toString(),
+                    "-I${file("src/main/jni/opencore/codecs_v2/audio/gsm_amr/amr_nb/enc/include")}".toString(),
+                    "-I${file("src/main/jni/opencore/codecs_v2/audio/gsm_amr/amr_nb/enc/src")}".toString(),
+                    "-I${file("src/main/jni/opencore/codecs_v2/audio/gsm_amr/common/dec/include")}".toString(),
+                    "-I${file("src/main/jni")}".toString()
+            ])
+
+        }
+
+        productFlavors {
+            create("arm") {
+                ndk {
+                    abiFilters.add("armeabi-v7a")
+                }
+            }
+        }
+
+        defaultConfig {
+            applicationId "io.kvh.media"
+            minSdkVersion.apiLevel 15
+            targetSdkVersion.apiLevel 22
+            versionCode 1
+            versionName "1.0"
+        }
+
+        buildTypes {
+            release {
+                minifyEnabled false
+                proguardFiles.add(file("proguard-rules.pro"))
+            }
         }
     }
 }
@@ -28,4 +72,4 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
 }
 
-apply from:'./bintray.gradle'
+//apply from: './bintray.gradle'

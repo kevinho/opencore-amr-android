@@ -5,7 +5,7 @@ android {
     buildToolsVersion '19.1.0'
 
     defaultConfig {
-        applicationId "com.hikvh.media.demo"
+        applicationId "io.kvh.media.demo"
         minSdkVersion 9
         targetSdkVersion 22
         versionCode 1
