@@ -82,7 +82,7 @@ If you are interested in this solution, please refer to [demo](demo/)
 
 ### v1.1.0 2016-04-02
 - add prebuilds for all archs
-- rename pakcage
+- rename package
 
 ## FAQ
 Please edit the FAQ files to help others, thanks! (赠人玫瑰，手留余香)
