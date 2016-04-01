@@ -1,6 +1,0 @@
-<resources>
-    <string name="app_name">OpenCore-Amr-Android</string>
-
-    <string name="record_start">Start Recorder</string>
-    <string name="record_stop">Stop Recorder</string>
-</resources>
