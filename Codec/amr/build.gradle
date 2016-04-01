@@ -1,5 +1,4 @@
 apply plugin: 'com.android.library'
-import org.apache.tools.ant.taskdefs.condition.Os
 
 android {
     compileSdkVersion 23
@@ -18,7 +17,6 @@ android {
         versionCode 1
         versionName "1.0"
     }
-
 
     buildTypes {
         release {
