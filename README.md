@@ -78,6 +78,11 @@ Audio steam is packaged to file in slices, the slice last a few seconds(customiz
 
 If you are interested in this solution, please refer to [Codec/app](Codec/app)
 
+## Milestone
+#### v1.2.0 April-15-2015
+- format converter for amr/wav
+- test cases
+
 ## Changelog
 
 #### v1.1.1 2016-04-05
