@@ -23,5 +23,5 @@ android {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile project(':amr')
-    //compile 'io.kvh:amr:1.1.0'//this is the second option
+    //compile 'io.kvh:amr:1.1.1'//this is the second option
 }
