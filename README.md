@@ -33,13 +33,13 @@ And one solution for packaging amr audio files.
   ```
   dependencies {
         compile fileTree(dir: 'libs', include: ['*.jar'])
-        compile 'io.kvh:amr:1.1.0'//this is the lib
+        compile 'io.kvh:amr:1.1.1'//this is the lib
   }
   ```
 
   OR: Copy the content if [Codec/amr](Codec/amr) to your module, as follows:
 
-  ![Integration](screenshot/android_studio_integration.png)
+  ![Integration](pics/android_studio_integration.png)
 
 ### ADT(Eclipse)
   Copy the content if [Codec/amr](Codec/amr) to your project:
@@ -76,9 +76,12 @@ AmrDecoder.exit(state);
 
 Audio steam is packaged to file in slices, the slice last a few seconds(customizable). This policy is suitable for this scenario: client is under unstable mobile network, client records amr file, sends slice by slice, server re-assembles the slices.
 
-If you are interested in this solution, please refer to [demo](demo/)
+If you are interested in this solution, please refer to [Codec/app](Codec/app)
 
 ## Changelog
+
+#### v1.1.1 2016-04-05
+- fix decoding bug of 32bit
 
 ### v1.1.0 2016-04-02
 - add prebuilds for all archs

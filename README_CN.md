@@ -31,13 +31,13 @@ opencore-amr-android
   ```
   dependencies {
         compile fileTree(dir: 'libs', include: ['*.jar'])
-        compile 'io.kvh:amr:1.1.0'//这个地方使用依赖
+        compile 'io.kvh:amr:1.1.1'//这个地方使用依赖
   }
   ```
 
   或者: 拷贝如下文件夹的内容 [Code/amr/](Code/amr/) 到你的module，如下图:
 
-  ![Integration](screenshot/android_studio_integration.png)
+  ![Integration](pics/android_studio_integration.png)
 > 也可以参考 Code/amr/ 工程
 
 - ADT(Eclipse)： 参照上图，拷贝对应文件即可。
@@ -73,9 +73,12 @@ AmrDecoder.exit(state);
 这个策略在如下场景实用：
 在较为不好的网络环境下，需要录制较长的音频，上传到服务器，在服务器进行组装。
 
-如果感兴趣，可以参照 [Code/amr/](Code/amr/)
+如果感兴趣，可以参照 [Codec/app](Codec/app)
 
 ## Changelog
+
+#### v1.1.1 2016-04-06
+- 修改 32bit 平台下 decode 的错误
 
 ### v1.1.0 2016-04-02
 - 增加全平台的 prebuild
