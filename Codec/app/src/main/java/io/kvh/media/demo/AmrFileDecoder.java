@@ -19,7 +19,7 @@ public class AmrFileDecoder implements Runnable {
     private AudioTrack mAudioTrack;
 
     private InputStream mInputStream;
-    private int mDecoderState;
+    private long mDecoderState;
 
     byte[] readBuffer;
     byte[] readBufferWithoutCompress;
@@ -82,12 +82,8 @@ public class AmrFileDecoder implements Runnable {
             while (isRunning && mInputStream.read(readBuffer) != -1) {
                 // amr frame 32 bytes
                 byte[] amrFrame = readBuffer.clone();
-                Log.i("aaa", "readBuffer.length:" + readBuffer.length);
-                Log.i("aaa", "amrFrame.length:" + amrFrame.length);
                 // pcm frame 160 shorts
                 short[] pcmFrame = new short[PCM_FRAME_SIZE];
-                Log.i("aaa", "pcmFrame.length:" + pcmFrame.length);
-                Log.i("aaa", "decode before");
                 AmrDecoder.decode(mDecoderState, amrFrame, pcmFrame);
 
                 // 播放
@@ -96,7 +92,5 @@ public class AmrFileDecoder implements Runnable {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-
     }
 }
