@@ -12,26 +12,20 @@ import io.kvh.media.KCacheUtils;
 import io.kvh.media.sound.SoundMan;
 
 public class MainActivity extends Activity {
-
-    Button recordButton;
     boolean isRecording;
+    boolean isDecoding;
+
+    private AmrFileDecoder mAmrFileDecoder;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
         KCacheUtils.init(this);
-
-        recordButton = (Button) findViewById(R.id.recordButton);
-        recordButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                triggerButton();
-            }
-        });
+        setContentView(R.layout.activity_main);
     }
 
-    private void triggerButton() {
+    public void onRecord(View view) {
+        Button recordButton = (Button) view;
         if (isRecording) {
             SoundMan.getInstance().stop();
             recordButton.setText(R.string.record_start);
@@ -43,7 +37,23 @@ public class MainActivity extends Activity {
         }
 
         isRecording = !isRecording;
+    }
 
+    public void onDecode(View view) {
+        Button decodeButton = (Button) view;
 
+        if (mAmrFileDecoder == null) {
+            mAmrFileDecoder = new AmrFileDecoder();
+        }
+
+        if (!isDecoding) {
+            mAmrFileDecoder.start(getResources().openRawResource(R.raw.demo));
+            decodeButton.setText(R.string.decode_stop);
+        } else {
+            mAmrFileDecoder.stop();
+            decodeButton.setText(R.string.decode_start);
+        }
+
+        isDecoding = !isDecoding;
     }
 }

@@ -3,4 +3,7 @@
 
     <string name="record_start">Start Recorder</string>
     <string name="record_stop">Stop Recorder</string>
+
+    <string name="decode_start">Start Decode</string>
+    <string name="decode_stop">Stop Decode</string>
 </resources>

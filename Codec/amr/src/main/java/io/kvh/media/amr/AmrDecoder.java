@@ -5,11 +5,11 @@ package io.kvh.media.amr;
  */
 public class AmrDecoder {
 
-	public static native long init();
+	public static native int init();
 
-	public static native void exit(long state);
+	public static native void exit(int state);
 
-	public static native void decode(long state, byte[] in, short[] out);
+	public static native void decode(int state, byte[] in, short[] out);
 
 	static {
 		System.loadLibrary("amr-codec");
