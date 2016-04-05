@@ -11,18 +11,18 @@ namespace amr_decode {
     extern "C" {
 #endif
 
-    JNIEXPORT jint JNICALL
+    JNIEXPORT jlong JNICALL
     Java_io_kvh_media_amr_AmrDecoder_init(JNIEnv *env, jclass type) {
-        return (jint)Decoder_Interface_init();
+        return (jlong) Decoder_Interface_init();
     }
 
     JNIEXPORT void JNICALL
-    Java_io_kvh_media_amr_AmrDecoder_exit(JNIEnv *env, jclass type, jint state) {
+    Java_io_kvh_media_amr_AmrDecoder_exit(JNIEnv *env, jclass type, jlong state) {
         Decoder_Interface_exit((void *) state);
     }
 
     JNIEXPORT void JNICALL
-    Java_io_kvh_media_amr_AmrDecoder_decode(JNIEnv *env, jclass, jint state, jbyteArray in, jshortArray out) {
+    Java_io_kvh_media_amr_AmrDecoder_decode(JNIEnv *env, jclass, jlong state, jbyteArray in, jshortArray out) {
 
         jsize inLen = env->GetArrayLength(in);
         jbyte inBuf[inLen];
