@@ -58,7 +58,7 @@ AmrEncoder.exit();
 * decode
 
 ```
-int state = AmrDecoder.init();
+long state = AmrDecoder.init();
 
 byte[] amrframe = new byte[32];//amr frame 32 bytes
 short[] pcmframs = new short[160];//pcm frame 160 shorts
