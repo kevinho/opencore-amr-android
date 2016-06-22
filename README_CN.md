@@ -66,6 +66,8 @@ AmrDecoder.decode(state, amrframe, pcmframs);
 
 AmrDecoder.exit(state);
 ```
+## 基础知识
+* Amr 文件有6字节的文件头："23 21 41 4D 52 0A" => "#!amr.", 在 decode frame 之前，记得先移除文件头。谢谢[AAccount 的讲解](https://github.com/kevinho/opencore-amr-android/issues/7).
 
 ## 将 amr 打包成文件
 > record->encode->package amr file->upload(not implemented)

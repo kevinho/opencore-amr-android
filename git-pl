@@ -1,0 +1,3 @@
+#! /bin/bash
+echo "Update Docs..."
+git pull github master

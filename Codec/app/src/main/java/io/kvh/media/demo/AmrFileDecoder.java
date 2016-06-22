@@ -53,6 +53,7 @@ public class AmrFileDecoder implements Runnable {
 
         mInputStream = inputStream;
 
+        //amr file has 6 bytes header: "23 21 41 4D 52 0A" => "#!amr.", so skip here
         try {
             mInputStream.skip(6);
         } catch (IOException e) {

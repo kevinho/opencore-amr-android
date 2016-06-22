@@ -71,6 +71,9 @@ AmrDecoder.decode(state, amrframe, pcmframs);
 AmrDecoder.exit(state);
 ```
 
+## Prerequisite Knowledge
+* Amr file has 6 bytes of header "23 21 41 4D 52 0A" => "#!amr.", please remember to remove the header before decoding frames, thanks to [AAccount's explaination](https://github.com/kevinho/opencore-amr-android/issues/7).
+
 ## Packaging amr audio to file system
 > record->encode->package amr file->upload(not implemented)
 
