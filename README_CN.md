@@ -55,6 +55,8 @@ int byteEncoded = AmrEncoder.encode(mode, in, out);
 
 AmrEncoder.exit();        
 ```
+[Arm-2-File](https://github.com/kevinho/opencore-amr-android/blob/master/Codec/app/src/main/java/io/kvh/media/sound/Filer.java)
+
 * decode
 
 ```
@@ -66,6 +68,7 @@ AmrDecoder.decode(state, amrframe, pcmframs);
 
 AmrDecoder.exit(state);
 ```
+[AmrFileDecoder.java](https://github.com/kevinho/opencore-amr-android/blob/master/Codec/app/src/main/java/io/kvh/media/demo/AmrFileDecoder.java)
 ## 基础知识
 * Amr 文件有6字节的文件头："23 21 41 4D 52 0A" => "#!amr.", 在 decode frame 之前，记得先移除文件头。谢谢[AAccount 的讲解](https://github.com/kevinho/opencore-amr-android/issues/7).
 
