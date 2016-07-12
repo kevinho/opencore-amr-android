@@ -39,7 +39,7 @@ And one solution for packaging amr audio files.
 
   OR: Copy the content if [Codec/amr](Codec/amr) to your module, as follows:
 
-  ![Integration](pics/android_studio_integration.png)
+  ![Integration](arts/android_studio_integration.png)
 
 ### ADT(Eclipse)
   Copy the content if [Codec/amr](Codec/amr) to your project:
@@ -59,6 +59,9 @@ int byteEncoded = AmrEncoder.encode(mode, in, out);
 
 AmrEncoder.exit();        
 ```
+
+[Arm-2-File](https://github.com/kevinho/opencore-amr-android/blob/master/Codec/app/src/main/java/io/kvh/media/sound/Filer.java)
+
 * decode
 
 ```
@@ -70,6 +73,7 @@ AmrDecoder.decode(state, amrframe, pcmframs);
 
 AmrDecoder.exit(state);
 ```
+[AmrFileDecoder.java](https://github.com/kevinho/opencore-amr-android/blob/master/Codec/app/src/main/java/io/kvh/media/demo/AmrFileDecoder.java)
 
 ## Prerequisite Knowledge
 * Amr file has 6 bytes of header "23 21 41 4D 52 0A" => "#!amr.", please remember to remove the header before decoding frames, thanks to [AAccount's explaination](https://github.com/kevinho/opencore-amr-android/issues/7).

@@ -37,7 +37,7 @@ opencore-amr-android
 
   或者: 拷贝如下文件夹的内容 [Code/amr/](Code/amr/) 到你的module，如下图:
 
-  ![Integration](pics/android_studio_integration.png)
+  ![Integration](arts/android_studio_integration.png)
 > 也可以参考 Code/amr/ 工程
 
 - ADT(Eclipse)： 参照上图，拷贝对应文件即可。
