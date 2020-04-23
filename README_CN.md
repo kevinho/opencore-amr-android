@@ -3,6 +3,8 @@ opencore-amr-android
 
 一个 Android 平台下的 amr 编解码库，附带了将 amr 组装成文件的解决方案。
 
+> 欢迎提交 PR 支持 AMR-WB
+
 ## 帮助QQ群：453503476
 
 ## 背景资料

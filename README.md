@@ -4,8 +4,10 @@ opencore-amr-android
 An opencore amr codec JNI wrapper with explanation,
 And one solution for packaging amr audio files.
 
+> AMR-WB support wanted, welcome PR.
+
 ### 中文文档请移步[README_CN](README_CN.md)
-## QQ tribe for help: 453503476
+## QQ group for help: 453503476
 
 ## Background
 - [opencore][1] is the multimedia framework of android, which is a originallly contributed by PacketVideo.
