@@ -3,7 +3,7 @@ opencore-amr-android
 
 一个 Android 平台下的 amr 编解码库，附带了将 amr 组装成文件的解决方案。
 
-> 欢迎提交 PR 支持 AMR-WB
+## !!!欢迎提交 PR 支持 AMR-WB!!!
 
 ## 帮助QQ群：453503476
 
@@ -83,6 +83,9 @@ AmrDecoder.exit(state);
 如果感兴趣，可以参照 [Codec/app](Codec/app)
 
 ## Changelog
+
+#### v1.1.1 2020-04-23
+- 增加对于 framesize 的文档解释
 
 #### v1.1.1 2016-04-06
 - 修改 32bit 平台下 decode 的错误

@@ -4,7 +4,7 @@ opencore-amr-android
 An opencore amr codec JNI wrapper with explanation,
 And one solution for packaging amr audio files.
 
-> AMR-WB support wanted, welcome PR.
+## !!!AMR-WB support wanted, welcome PR.!!!
 
 ### 中文文档请移步[README_CN](README_CN.md)
 ## QQ group for help: 453503476
@@ -93,6 +93,9 @@ If you are interested in this solution, please refer to [Codec/app](Codec/app)
 - test cases
 
 ## Changelog
+
+#### v1.1.1 2020-04-23
+- add docs for framesize
 
 #### v1.1.1 2016-04-05
 - fix decoding bug of 32bit
