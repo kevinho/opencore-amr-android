@@ -86,6 +86,7 @@ public class Codec implements Runnable, Supporter.PcmConsumer, Supporter.OnOffSw
         while (pcmFrames.size() > 0) {
             short[] buffer = pcmFrames.remove(0);
             byte[] encodedData = new byte[buffer.length];
+            //using AmrEncoder.Mode.MR122 to encode, generated frame size would be 32
             int encodedLength = AmrEncoder.encode(AmrEncoder.Mode.MR122.ordinal(), buffer, encodedData);
 
             if (DEBUG)

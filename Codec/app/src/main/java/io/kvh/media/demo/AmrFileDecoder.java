@@ -30,7 +30,9 @@ public class AmrFileDecoder implements Runnable {
     // 20 ms second
     // 0.02 x 8000 x 2 = 320;160 short
     static final int PCM_FRAME_SIZE = 160;
-    static final int AMR_FRAME_SIZE = 32;
+
+    //using AmrEncoder.Mode.MR122 to encode, generated frame size would be 32
+    static final int AMR_FRAME_SIZE = 32;// see io.kvh.media.sound.Codec
 
     boolean isRunning;
 
